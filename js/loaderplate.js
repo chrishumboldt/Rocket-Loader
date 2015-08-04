@@ -102,6 +102,7 @@ var loaderplate = function($userOptions) {
          $loader = tool.html.loader;
          if (tool.exists($element)) {
             $loaderTimeout = setTimeout(function() {
+               tool.classRemove($element, 'loaderplate-element-show');
                tool.classAdd($element, 'loaderplate-element-hide');
                $element.parentNode.insertBefore($loader, $element);
             }, $self.options.delay);
@@ -112,6 +113,7 @@ var loaderplate = function($userOptions) {
       if (tool.exists($loader.parentNode)) {
          $loader.parentNode.removeChild($loader);
          tool.classRemove($element, 'loaderplate-element-hide');
+         tool.classAdd($element, 'loaderplate-element-show');
       } else {
          clearTimeout($loaderTimeout);
       }
