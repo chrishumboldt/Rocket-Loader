@@ -14,7 +14,7 @@
 var loaderplate = function($userOptions) {
    // Variables
    var $self = this;
-   var $loader, $element;
+   var $loader, $element, $loaderTimeout;
 
    // Options
    $userOptions = $userOptions || false;
@@ -101,7 +101,7 @@ var loaderplate = function($userOptions) {
          $element = document.querySelector($self.options.selector);
          $loader = tool.html.loader;
          if (tool.exists($element)) {
-            setTimeout(function() {
+            $loaderTimeout = setTimeout(function() {
                tool.classAdd($element, 'loaderplate-element-hide');
                $element.parentNode.insertBefore($loader, $element);
             }, $self.options.delay);
@@ -109,8 +109,12 @@ var loaderplate = function($userOptions) {
       }
    };
    $self.remove = function() {
-      $loader.parentNode.removeChild($loader);
-      tool.classRemove($element, 'loaderplate-element-hide');
+      if (tool.exists($loader.parentNode)) {
+         $loader.parentNode.removeChild($loader);
+         tool.classRemove($element, 'loaderplate-element-hide');
+      } else {
+         clearTimeout($loaderTimeout);
+      }
    };
 
    // Calls
