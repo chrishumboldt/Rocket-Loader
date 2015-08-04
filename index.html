@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Meta setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <!-- Title -->
+    <title>Loaderplate</title>
+
+    <!-- Include Loaderplate -->
+    <script src="js/loaderplate.js"></script>
+    <link href="css/loaderplate.css" rel="stylesheet" type="text/css">
+
+	<!-- Demo -->
+	<link href="css/demo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+   <div class="container">
+		<h3>Loader Example</h3>
+      <div class="block">
+         <div id="loader-test-1"></div>
+         <button id="loader-test-1-remove">Remove Loader 1</button>
+      </div>
+      <div class="block">
+         <div id="loader-test-2"></div>
+         <button id="loader-test-2-remove">Remove Loader 2</button>
+      </div>
+   </div>
+
+   <script>
+   var $loaderOne = new loaderplate({
+      selector: '#loader-test-1',
+      body: 'Loader Text'
+   });
+   document.getElementById('loader-test-1-remove').onclick = function() {
+      $loaderOne.remove();
+   };
+
+   var $loaderTwo = new loaderplate({
+      selector: '#loader-test-2',
+      body: 'Loader Text',
+      colour: 'yellow',
+      size: 'large',
+      type: 'three-dots'
+   });
+   document.getElementById('loader-test-2-remove').onclick = function() {
+      $loaderTwo.remove();
+   };
+   </script>
+
+</body>
+</html>

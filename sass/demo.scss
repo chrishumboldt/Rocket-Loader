@@ -1,0 +1,41 @@
+/**
+ * File: demo.scss
+ * Type: SASS demo
+ * Author: Chris Humboldt
+ */
+
+// Table of contents
+// ---------------------------------------------------------------------------------------
+// Import
+// Demo
+
+// Import
+// ---------------------------------------------------------------------------------------
+@import "../bower_components/blueplate/sass/blueplate";
+
+// Demo styles
+// ---------------------------------------------------------------------------------------
+@include global-setup();
+
+html {
+	@include height-min(100%);
+}
+html, body {
+	@include no-spacing();
+	@include background-colour($white);
+}
+
+// Container
+.container {
+	@include limit();
+	@include padding(20px);
+	@include text-align(center);
+	@include respond-to(large) {
+		@include padding-vertical(40px);
+	}
+}
+
+// Blocks
+.block {
+	@include row();
+}
