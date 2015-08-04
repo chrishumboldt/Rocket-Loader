@@ -22,7 +22,7 @@ var loaderplate = function($userOptions) {
       body: $userOptions.body || false,
       colour: $userOptions.colour || 'blue',
       delay: ($userOptions.delay >= 0) ? $userOptions.delay : 400,
-      path: $userOptions.path || './css/',
+      path: $userOptions.path || './loaders/',
       selector: $userOptions.selector || false,
       size: $userOptions.size || 'normal',
       type: $userOptions.type || 'puff'
