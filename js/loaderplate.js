@@ -110,7 +110,7 @@ var loaderplate = function($userOptions) {
    };
    $self.remove = function() {
       $loader.parentNode.removeChild($loader);
-      tool.classRemove($element, 'laoderplate-element-hide');
+      tool.classRemove($element, 'loaderplate-element-hide');
    };
 
    // Calls
