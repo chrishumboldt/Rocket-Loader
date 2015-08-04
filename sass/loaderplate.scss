@@ -39,6 +39,12 @@
    &.green {
       @include text-colour($green);
    }
+   &.grey-blue {
+      @include text-colour($grey-blue);
+   }
+   &.grey-blue-dark {
+      @include text-colour($grey-blue-dark);
+   }
    &.orange {
       @include text-colour($orange);
    }

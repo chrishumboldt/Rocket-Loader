@@ -6,10 +6,21 @@
 
 // Table of contents
 // ---------------------------------------------------------------------------------------
+// Default setup
 // Variables
 // Options
 // Tools
 // Check
+
+var $loaderplateSetup = {
+   body: false,
+   colour: 'grey-blue',
+   delay: 400,
+   path: './loaders/',
+   selector: false,
+   size: 'large',
+   type: 'puff'
+};
 
 var loaderplate = function($userOptions) {
    // Variables
@@ -19,13 +30,13 @@ var loaderplate = function($userOptions) {
    // Options
    $userOptions = $userOptions || false;
    $self.options = {
-      body: $userOptions.body || false,
-      colour: $userOptions.colour || 'blue',
-      delay: ($userOptions.delay >= 0) ? $userOptions.delay : 400,
-      path: $userOptions.path || './loaders/',
-      selector: $userOptions.selector || false,
-      size: $userOptions.size || 'normal',
-      type: $userOptions.type || 'puff'
+      body: $userOptions.body || $loaderplateSetup.body,
+      colour: $userOptions.colour || $loaderplateSetup.colour,
+      delay: ($userOptions.delay >= 0) ? $userOptions.delay : $loaderplateSetup.delay,
+      path: $userOptions.path || $loaderplateSetup.path,
+      selector: $userOptions.selector || $loaderplateSetup.selector,
+      size: $userOptions.size || $loaderplateSetup.size,
+      type: $userOptions.type || $loaderplateSetup.type
    }
 
    // Tools
@@ -110,10 +121,10 @@ var loaderplate = function($userOptions) {
       }
    };
    $self.remove = function() {
+      tool.classAdd($element, 'loaderplate-element-show');
       if (tool.exists($loader.parentNode)) {
          $loader.parentNode.removeChild($loader);
          tool.classRemove($element, 'loaderplate-element-hide');
-         tool.classAdd($element, 'loaderplate-element-show');
       } else {
          clearTimeout($loaderTimeout);
       }
