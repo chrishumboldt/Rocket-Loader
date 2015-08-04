@@ -5,12 +5,20 @@
    "main": "index.html",
    "keywords": [
       "Loader",
-      "Javascript",
       "Component",
-      "Webplate"
+      "Webplate",
+      "Javascript",
+      "CSS"
    ],
    "author": "Chris Humboldt",
    "license": "Apache-2.0",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/chrishumboldt/Loaderplate.git"
+   },
+   "bugs": {
+      "url": "https://github.com/chrishumboldt/Loaderplate/issues"
+   },
    "devDependencies": {
       "gulp": "^3.9.0",
       "gulp-livereload": "^3.8.0",
