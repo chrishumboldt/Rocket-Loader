@@ -5,12 +5,13 @@
  */
 
 // Table of contents
-// Default setup
+// Defaults
 // Variables
 // Options
 // Tools
 // Check
 
+// Defaults
 var $loaderplateDefault = {
 	body: false,
 	colour: 'grey-blue',
