@@ -1,11 +1,11 @@
 {
 	"name": "loaderplate",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"homepage": "https://github.com/chrishumboldt/Loaderplate",
 	"authors": [
       "Chris Humboldt <chrismodem@gmail.com>"
    ],
-	"description": "A simple Javascript loader library.",
+	"description": "A Javascript loader library.",
 	"main": ["js/min/loaderplate.js", "css/loaderplate.css"],
 	"keywords": [
       "Loader",
