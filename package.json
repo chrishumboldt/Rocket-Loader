@@ -1,7 +1,7 @@
 {
 	"name": "loaderplate",
-	"version": "1.0.8",
-	"description": "A simple Javascript loader library.",
+	"version": "1.0.9",
+	"description": "A Javascript loader library.",
 	"main": "index.html",
 	"keywords": [
       "Loader",
