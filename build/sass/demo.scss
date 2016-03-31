@@ -10,7 +10,7 @@
 // Demo
 
 // Import
-@import "../bower_components/blueplate/sass/blueplate";
+@import "../../bower_components/blueplate/sass/blueplate";
 
 // Code
 .prettyprint {
@@ -18,7 +18,7 @@
 	@include padding($space-small);
 	@include margin-bottom(1.5em);
 	font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
-	@include text-size(12px);
+	@include text-size(13px);
 	@include text-line-height(20px);
 	@include background-colour(lighten($grey-blue-light, 15%));
 	@include overflow(scroll);

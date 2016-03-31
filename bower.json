@@ -1,31 +1,38 @@
 {
-	"name": "loaderplate",
-	"version": "1.0.9",
-	"homepage": "https://github.com/chrishumboldt/Loaderplate",
-	"authors": [
-      "Chris Humboldt <chrismodem@gmail.com>"
-   ],
-	"description": "A Javascript loader library.",
-	"main": ["js/min/loaderplate.js", "css/loaderplate.css"],
-	"keywords": [
-      "Loader",
-      "Component",
-      "Webplate",
-      "Javascript",
-      "CSS"
-   ],
-	"license": "Apache-2.0",
-	"ignore": [
-      "**/.*",
-      "node_modules",
-      "bower_components",
-      "test",
-      "tests",
-      "gulpfile.js",
-      "package.json",
-      "index.html",
-      "bower.json",
-      "css/demo.css",
-      "sass"
-   ]
+  "name": "loaderplate",
+  "version": "1.0.10",
+  "homepage": "https://github.com/chrishumboldt/Loaderplate",
+  "authors": [
+    "Chris Humboldt <chrismodem@gmail.com>"
+  ],
+  "description": "A Javascript loader component.",
+  "main": [
+    "js/loaderplate.min.js",
+    "css/loaderplate.min.css"
+  ],
+  "keywords": [
+    "Loader",
+    "Component",
+    "Webplate",
+    "Javascript",
+    "CSS"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "gulpfile.js",
+    "package.json",
+    "index.html",
+    "bower.json",
+    "build",
+    "css/demo.min.css",
+    "js/demo.min.js"
+  ],
+  "devDependencies": {
+    "blueplate": "^1.6.7"
+  }
 }
