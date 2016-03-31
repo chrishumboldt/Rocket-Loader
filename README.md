@@ -8,7 +8,7 @@ bower install loaderplate
 ```
 
 Start by including the necessary files.
-```
+```html
 <head>
    <link href="css/loaderplate.css" rel="stylesheet" type="text/css">
 </head>
@@ -20,7 +20,7 @@ Start by including the necessary files.
 
 ## Basic Example
 Below is an example of executing the component complete with required HTML and Javascript.
-```
+```html
 <div id="example"></div>
 <a href id="example-remove">Remove Loader</a>
 <script>
@@ -51,7 +51,7 @@ See the different options you have available on component call.
 #### Defaults
 You can also set or overwrite the above options globally by altering the Loaderplate defaults. To do so reference the **$loaderplateDefault** object. For example:
 
-```
+```html
 <script>
 // Default change
 $loaderplateDefault.body = 'Loading';

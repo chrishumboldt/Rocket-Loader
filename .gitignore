@@ -38,5 +38,6 @@ validation-status.json
 validation-report.json
 
 # Folders to ignore
+bower_components
 node_modules
 .sass-cache
