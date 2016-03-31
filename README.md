@@ -10,11 +10,11 @@ bower install loaderplate
 Start by including the necessary files.
 ```html
 <head>
-   <link href="css/loaderplate.css" rel="stylesheet" type="text/css">
+   <link href="css/loaderplate.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
    /* Your content goes here */
-   <script src="js/min/loaderplate.js"></script>
+   <script src="js/loaderplate.min.js"></script>
 </body>
 ```
 
