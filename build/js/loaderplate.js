@@ -115,7 +115,9 @@ var loaderplate = function($userOptions) {
 				$loaderTimeout = setTimeout(function() {
 					tool.classRemove($element, 'loaderplate-element-show');
 					tool.classAdd($element, 'loaderplate-element-hide');
-					$element.parentNode.insertBefore($loader, $element);
+					if (!tool.exists($element.parentNode.querySelector('.loaderplate'))) {
+						$element.parentNode.insertBefore($loader, $element);
+					}
 				}, $self.options.delay);
 			}
 		}
@@ -123,7 +125,9 @@ var loaderplate = function($userOptions) {
 	$self.remove = function() {
 		tool.classAdd($element, 'loaderplate-element-show');
 		if (tool.exists($loader.parentNode)) {
-			$loader.parentNode.removeChild($loader);
+			if (tool.exists($loader)) {
+				$loader.parentNode.removeChild($loader);
+			}
 			tool.classRemove($element, 'loaderplate-element-hide');
 		} else {
 			clearTimeout($loaderTimeout);
