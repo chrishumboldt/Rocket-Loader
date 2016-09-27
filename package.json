@@ -1,6 +1,6 @@
 {
 	"name": "loaderplate",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"description": "A Javascript loader component.",
 	"main": "index.html",
 	"keywords": [

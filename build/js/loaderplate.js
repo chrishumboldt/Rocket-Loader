@@ -30,7 +30,7 @@ var loaderplate = function($userOptions) {
 	// Options
 	$userOptions = $userOptions || false;
 	$self.options = {
-		body: $userOptions.body || $loaderplateDefault.body,
+		body: (typeof $userOptions.body !== 'undefined') ? $userOptions.body : $loaderplateDefault.body,
 		colour: $userOptions.colour || $loaderplateDefault.colour,
 		delay: ($userOptions.delay >= 0) ? $userOptions.delay : $loaderplateDefault.delay,
 		path: $userOptions.path || $loaderplateDefault.path,

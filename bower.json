@@ -1,6 +1,6 @@
 {
   "name": "loaderplate",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "homepage": "https://github.com/chrishumboldt/Loaderplate",
   "authors": [
     "Chris Humboldt <chrismodem@gmail.com>"
@@ -33,6 +33,6 @@
     "js/demo.min.js"
   ],
   "devDependencies": {
-    "blueplate": "^1.6.7"
+    "blueplate": "^2.2.2"
   }
 }
