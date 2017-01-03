@@ -124,11 +124,11 @@ var loaderplate = function($userOptions) {
 	};
 	$self.remove = function() {
 		tool.classAdd($element, 'loaderplate-element-show');
+		tool.classRemove($element, 'loaderplate-element-hide');
 		if (tool.exists($loader.parentNode)) {
 			if (tool.exists($loader)) {
 				$loader.parentNode.removeChild($loader);
 			}
-			tool.classRemove($element, 'loaderplate-element-hide');
 		} else {
 			clearTimeout($loaderTimeout);
 		}
