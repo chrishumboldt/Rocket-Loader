@@ -43,10 +43,10 @@ Name | Default | Options | Description
 `selector` | | | Set the HTML selector. Can also be an element.
 `append` | `false` | `true` `false` | Append the loader to the `selector` element.
 `body` | | | **NOTE** that an empty value will display no text.
-`colour` | `grey-blue` | `aqua`, `black`, `blue`, `green`, `grey-blue`, `grey-blue-dark`, `orange`, `pink`, `purple`, `red`, `white`, `yellow` | Set the loader colour.
+`colour` | `grey-blue` | `aqua` `black` `blue` `green` `grey-blue` `grey-blue-dark` `orange` `pink` `purple` `red` `white` `yellow` | Set the loader colour.
 `delay` | 0 | | Set a delay (in seconds) on the loader showing.
-`size` | `normal` | `small`, `normal`, `large` | Set the size of the loader and its padding.
-`type` | `spinner` | `dots`, `pulse`, `spinner` | Set the loader type.
+`size` | `normal` | `small` `normal` `large` | Set the size of the loader and its padding.
+`type` | `spinner` | `dots` `pulse` `spinner` | Set the loader type.
 
 #### Defaults
 You can also overwrite the options globally by altering the Rocket defaults. To do so reference the defaults object property, for example:
