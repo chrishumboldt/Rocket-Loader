@@ -1,0 +1,38 @@
+/**
+ * Author: Chris Humboldt
+**/
+
+.loader {
+   @include position(relative);
+   @include show();
+   @include height($loader-size);
+   @include margin-vertical($loader-size);
+   @include text-align(center);
+   @include overflow(hidden);
+   // Inner
+   .loader-inner {
+      @include spacing-no();
+      @include position(absolute, top 50% left 50% margin-left $loader-size-half margin-top $loader-size-half);
+      @include square($loader-size);
+      @include animate(all);
+   }
+   // Sizes
+   &._small {
+      @include height($loader-size-small);
+      @include margin-vertical($loader-size-small);
+      .loader-inner {
+         @include position-set(margin-left $loader-size-half-small margin-top $loader-size-half-small);
+      }
+   }
+   &._large {
+      @include height($loader-size-large);
+      @include margin-vertical($loader-size-large);
+      .loader-inner {
+         @include position-set(margin-left $loader-size-half-large margin-top $loader-size-half-large);
+      }
+   }
+}
+.loader-show,
+._hide.loader-show {
+   @include show();
+}

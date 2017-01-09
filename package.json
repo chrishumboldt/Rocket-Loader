@@ -1,23 +1,32 @@
 {
-	"name": "rocket-loader",
-	"version": "2.0.0",
-	"description": "A Javascript loader module.",
-	"main": "index.html",
-	"keywords": [
-      "Rocket",
-      "Part",
-      "Module",
-      "Loader",
-      "Javascript",
-      "CSS"
-   ],
-	"author": "Chris Humboldt",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chrishumboldt/Loaderplate.git"
-	},
-	"bugs": {
-		"url": "https://github.com/chrishumboldt/Loaderplate/issues"
-	}
+  "name": "rocket-loader",
+  "version": "2.0.0",
+  "description": "A Javascript loader module.",
+  "main": "index.html",
+  "keywords": [
+    "Rocket",
+    "Part",
+    "Module",
+    "Loader",
+    "Javascript",
+    "CSS"
+  ],
+  "author": "Chris Humboldt",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrishumboldt/Loaderplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrishumboldt/Loaderplate/issues"
+  },
+  "engines": {
+     "npm": "^3.0.0"
+  },
+  "dependencies": {
+    "rocket-propel": "^3.0.3"
+  },
+  "devDependencies": {
+    "rocket-demo": "^2.0.1"
+  }
 }

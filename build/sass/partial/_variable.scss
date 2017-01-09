@@ -1,0 +1,10 @@
+/**
+ * Author: Chris Humboldt
+**/
+
+$loader-size: 36px;
+$loader-size-small: $loader-size - 10px;
+$loader-size-large: $loader-size + 8px;
+$loader-size-half: -$loader-size / 2;
+$loader-size-half-small: -$loader-size-small / 2;
+$loader-size-half-large: -$loader-size-large / 2;
