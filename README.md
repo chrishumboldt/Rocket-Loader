@@ -40,9 +40,9 @@ See the different options you have available on component call.
 
 Name | Default | Options | Description
 ---- | ---- | ---- | ----
-`selector` | false | | Set the HTML selector. Can also be an element.
-`append` | false | `true` `false` | Append the loader to the `selector` element.
-`body` | '' | | **NOTE** that an empty value will display no text.
+`selector` | | | Set the HTML selector. Can also be an element.
+`append` | `false` | `true` `false` | Append the loader to the `selector` element.
+`body` | | | **NOTE** that an empty value will display no text.
 `colour` | `grey-blue` | `aqua`, `black`, `blue`, `green`, `grey-blue`, `grey-blue-dark`, `orange`, `pink`, `purple`, `red`, `white`, `yellow` | Set the loader colour.
 `delay` | 0 | | Set a delay (in seconds) on the loader showing.
 `size` | `normal` | `small`, `normal`, `large` | Set the size of the loader and its padding.
