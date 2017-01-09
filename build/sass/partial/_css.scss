@@ -2,7 +2,7 @@
  * Author: Chris Humboldt
 **/
 
-@mixin loader-css {
+@mixin rocket-loader-css {
    @include loader-dots;
    @include loader-pulse;
    @include loader-spinner;
