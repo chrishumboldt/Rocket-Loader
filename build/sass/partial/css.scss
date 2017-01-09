@@ -1,0 +1,9 @@
+/**
+ * Author: Chris Humboldt
+**/
+
+@mixin loader-css {
+   @include loader-dots;
+   @include loader-pulse;
+   @include loader-spinner;
+}

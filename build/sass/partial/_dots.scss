@@ -1,0 +1,86 @@
+/**
+ * Author: Chris Humboldt
+**/
+
+@mixin loader-dots {
+   .rocket-loader._t-dots {
+      .rl-loader {
+         @include width(76px);
+      }
+      .part-one,
+      .part-two,
+      .part-three {
+         @include position(absolute, top 50% margin-top $dot-size-half);
+         @include square($dot-size);
+         @include border-radius(50%);
+         @include background-colour($grey-blue);
+         @include opacity(0.3);
+         @include animation(swell, 1s, infinite);
+         @include animation-timing-function;
+      }
+      .part-one {
+         @include position-set(left 8px);
+      }
+      .part-two {
+         @include position-set(left 50% margin-left $dot-size-half);
+         @include animation-delay(0.15s);
+      }
+      .part-three {
+         @include position-set(right 8px);
+         @include animation-delay(0.3s);
+      }
+      @each $colour-name, $colour in $ar-colours-primary {
+         &._c-#{$colour-name} {
+            .part-one,
+            .part-two,
+            .part-three {
+               @include background-colour($colour);
+            }
+         }
+      }
+      // Size
+      &._s-small {
+         .rl-loader {
+            @include width(56px);
+         }
+         .part-one,
+         .part-two,
+         .part-three {
+            @include position-set(margin-top $dot-size-half-small);
+            @include square($dot-size-small);
+         }
+         .part-two {
+            @include position-set(left 50% margin-left $dot-size-half-small);
+         }
+      }
+      &._s-large {
+         .rl-loader {
+            @include width(106px);
+         }
+         .part-one,
+         .part-two,
+         .part-three {
+            @include position-set(margin-top $dot-size-half-large);
+            @include square($dot-size-large);
+         }
+         .part-two {
+            @include position-set(left 50% margin-left $dot-size-half-large);
+         }
+      }
+   }
+
+   @include keyframes(swell) {
+      0% {
+         @include opacity(0.3);
+         @include transform-scale-3d(1, 1, 1);
+      }
+      35% {
+         @include opacity(1);
+         @include transform-scale-3d(1.3, 1.3, 1.3);
+      }
+      70%, 100% {
+         @include opacity(0.3);
+         @include transform-scale-3d(1, 1, 1);
+      }
+   }
+}
