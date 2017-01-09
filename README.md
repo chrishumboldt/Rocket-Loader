@@ -31,6 +31,7 @@ Below is an example of executing the module complete with required HTML and Java
 <div id="example"></div>
 <button id="remove">Remove Loader</button>
 
+<!-- Scripts -->
 <script>
 var loader = Rocket.loader({
    selector: '#example',
