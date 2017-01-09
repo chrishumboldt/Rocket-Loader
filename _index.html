@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <!-- Meta setup - Required for apple device -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- Title -->
+	<title>Loaderplate Component</title>
+	<!-- Styles -->
+	<link href="css/loaderplate.min.css" rel="stylesheet" type="text/css">
+	<link href="css/demo.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+	<div class="heading"><div class="container">
+		<h2>Loaderplate Component</h2>
+	</div></div>
+
+   <div class="container">
+		<h4>Welcome</h4>
+		<p>A simple Javascript loading icon component using <a href="http://samherbert.net/svg-loaders/" target="_blank">SVG Loaders</a> created by <a href="https://twitter.com/sherb" target="_blank">Sam Herbert</a></p>
+		<h4>Getting Started</h4>
+		<p>You can either download a copy of the source files or install Loaderplate via Bower.</p>
+<pre class="prettyprint linenums">
+bower install loaderplate
+</pre>
+	<p>Start by including the necessary files.</p>
+<pre class="prettyprint linenums">
+&lt;head&gt;
+    &lt;link href=&quot;css/loaderplate.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    /* Your content goes here */
+    &lt;script src=&quot;js/loaderplate.min.js&quot;>&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+		<br>
+		<h4>Basic Example</h4>
+		<p>Below is an example of executing the component complete with required HTML and Javascript.</p>
+<pre class="prettyprint linenums">
+&lt;div id="example"&gt;&lt;/div&gt;
+&lt;a href id="example-remove"&gt;Remove Loader&lt;/a&gt;
+&lt;script&gt;
+var $loaderExample = new loaderplate({
+   selector: '#example',
+   body: 'Loader Works!',
+   type: 'puff'
+});
+document.getElementById('example-remove').onclick = function() {
+   $loaderExample.remove();
+};
+&lt;/script&gt;
+</pre>
+		<p>The different type options are <b>audio</b>, <b>ball-triangle</b>, <b>bars</b>, <b>circles</b>, <b>grid</b>, <b>hearts</b>, <b>oval</b>, <b>puff</b>, <b>rings</b>, <b>spinning-circles</b>, <b>tail-spin</b> and <b>three-dots</b>.</p>
+		<br>
+		<h4>Working Example</h4>
+      <div id="example"></div>
+      <p><a href id="example-remove" class="link">Remove Loader</a></p>
+		<br><br>
+		<h4>Detailed Documentation</h4>
+      <p>For a more detailed look into the available options, you can read the documentation at <a target="_blank" href="https://github.com/chrishumboldt/Loaderplate" class="link">https://github.com/chrishumboldt/Loaderplate</a></p>
+	</div>
+
+	<footer><div class="container"><div class="col-double">
+		<div class="left">
+			Made by <a href="http://chrishumboldt.com" target="_blank">Chris Humboldt</a>
+		</div>
+		<div class="right">
+			A <a href="http://getwebplate.com" target="_blank">Webplate Project</a>&nbsp;&nbsp;
+			Want updates? <a href="http://twitter.com/webplatetweets" target="_blank">@webplatetweets</a>
+		</div>
+	</div></div></footer>
+
+   <script src="js/loaderplate.min.js"></script>
+   <script src="js/demo.min.js"></script>
+   <script>
+   var $loaderExample = new loaderplate({
+      selector: '#example',
+      body: 'Loader Works!',
+		type: 'puff'
+   });
+   document.getElementById('example-remove').onclick = function(event) {
+      event.preventDefault();
+      $loaderExample.remove();
+   };
+   </script>
+
+</body>
+</html>
