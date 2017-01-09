@@ -19,7 +19,7 @@ Start by including the necessary files.
 ```
 
 ## Basic Example
-Below is an example of executing the component complete with required HTML and Javascript.
+Below is an example of executing the module complete with required HTML and Javascript.
 ```html
 <div id="example"></div>
 <button id="remove">Remove Loader</button>
@@ -36,7 +36,7 @@ document.getElementById('remove').onclick = function() {
 ```
 
 ## Javascript Options
-See the different options you have available on component call.
+See the different options you have available on module call.
 
 Name | Default | Options | Description
 ---- | ---- | ---- | ----
@@ -57,7 +57,7 @@ Rocket.defaults.loader.type = 'dots';
 ```
 
 ## Rocket Tools
-If you are using this module in conjunction with [Rocket Tools](https://github.com/chrishumboldt/Rocket-Tools), then **always** load the Rocket Tools library first. This component extends that library when detected.
+If you are using this module in conjunction with [Rocket Tools](https://github.com/chrishumboldt/Rocket-Tools), then **always** load the Rocket Tools library first. This module extends that library when detected.
 
 ## Loaderplate Deprecated
 The original library, Loaderplate, has been deprecated. The entire Webplate project is being refactored and rebranded with a new development philosophy. Loaderplate will be maintained only with bug fixes under the **Loaderplate** branch.
