@@ -1,12 +1,13 @@
 {
-	"name": "loaderplate",
-	"version": "1.0.12",
-	"description": "A Javascript loader component.",
+	"name": "rocket-loader",
+	"version": "2.0.0",
+	"description": "A Javascript loader module.",
 	"main": "index.html",
 	"keywords": [
+      "Rocket",
+      "Part",
+      "Module",
       "Loader",
-      "Component",
-      "Webplate",
       "Javascript",
       "CSS"
    ],

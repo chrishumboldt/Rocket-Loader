@@ -1,20 +1,20 @@
-# Loaderplate
-A simple Javascript loading icon component using <a href="http://samherbert.net/svg-loaders/">SVG Loaders</a> created by <a href="https://twitter.com/sherb">Sam Herbert</a>.
+# Rocket Loader
+A simple Javascript loading module.
 
 ## Getting Started
-You can either download a copy of the source files or install Loaderplate via Bower.
+You can either download a copy of the source files or install Rocket Loader via NPM.
 ```
-bower install loaderplate
+npm install rocket-loader
 ```
 
 Start by including the necessary files.
 ```html
 <head>
-   <link href="css/loaderplate.min.css" rel="stylesheet" type="text/css">
+   <link href="rocket-loader/css/loader.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
    /* Your content goes here */
-   <script src="js/loaderplate.min.js"></script>
+   <script src="rocket-loader/js/loader.min.js"></script>
 </body>
 ```
 
@@ -22,15 +22,15 @@ Start by including the necessary files.
 Below is an example of executing the component complete with required HTML and Javascript.
 ```html
 <div id="example"></div>
-<a href id="example-remove">Remove Loader</a>
+<a href id="remove">Remove Loader</a>
 <script>
-var $loaderExample = new loaderplate({
+var loader = Rocket.loader({
    selector: '#example',
    body: 'Loader Works!',
    type: 'puff'
 });
-document.getElementById('example-remove').onclick = function() {
-   $loaderExample.remove();
+document.getElementById('remove').onclick = function() {
+   loader.remove();
 };
 </script>
 ```
@@ -44,36 +44,30 @@ See the different options you have available on component call.
 | body | false | | **NOTE** that the false value will display no text. |
 | colour | grey-blue | aqua, black, blue, green, grey-blue, grey-blue-dark, orange, pink, purple, red, white, yellow | Set the loader colour. |
 | delay | 400 | | Set a delay on the loader showing. |
-| path | ./loaders/ | | Set the path to the loaders folder relative to your project. |
 | size | large | x-small, small, minor, normal, slight, medium, large, x-large | Set the size of the loader and its padding. |
-| type | puff | audio, ball-triangle, bars, circles, grid, hearts, oval, puff, rings, spinning-circles, tail-spin and three-dots | Set the loader type. |
+| type | puff | puff, spinner | Set the loader type. |
 
 #### Defaults
-You can also set or overwrite the above options globally by altering the Loaderplate defaults. To do so reference the **$loaderplateDefault** object. For example:
+You can also overwrite the options globally by altering the Rocket defaults. To do so reference the defaults object property, for example:
 
-```html
-<script>
-// Default change
-$loaderplateDefault.body = 'Loading';
-$loaderplateDefault.colour = 'blue';
-$loaderplateDefault.type = 'rings';
-
-// Execute
-var $loaderExample = new loaderplate({
-   selector: '#example'
-});
-</script>
+```javascript
+Rocket.defaults.loader.type = 'spinner';
 ```
+
+## Rocket Tools
+If you are using this module in conjunction with [Rocket Tools](https://github.com/chrishumboldt/Rocket-Tools), then **always** load the Rocket Tools library first. This component extends that library when detected.
+
+## Loaderplate Deprecated
+The original library, Loaderplate, has been deprecated. The entire Webplate project is being refactored and rebranded with a new development philosophy. Loaderplate will be maintained only with bug fixes under the **Loaderplate** branch.
 
 ## Author
 Created and maintained by Chris Humboldt<br>
 Website: <a href="http://chrishumboldt.com/">chrishumboldt.com</a><br>
 Twitter: <a href="https://twitter.com/chrishumboldt">twitter.com/chrishumboldt</a><br>
 GitHub <a href="https://github.com/chrishumboldt">github.com/chrishumboldt</a><br>
-SVG Loaders: <a href="https://twitter.com/sherb">Sam Herbert</a><br>
 
 ## Copyright and License
-Copyright 2016 Webplate Project
+Copyright 2016 Rocket Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

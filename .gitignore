@@ -41,3 +41,6 @@ validation-report.json
 bower_components
 node_modules
 .sass-cache
+
+# Files to ignore
+test.html
