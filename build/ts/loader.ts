@@ -46,7 +46,7 @@ module RockMod_Loader {
             loader.parentNode.removeChild(loader);
          }
          if (isElement(elm)) {
-            let showType = (typeof type === 'string') ? type : (elmDisplay === '') ? '' : elmDisplay;
+            let showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
             elm.style.display = showType;
          }
       };
