@@ -22,7 +22,7 @@ Start by including the necessary files.
 Below is an example of executing the component complete with required HTML and Javascript.
 ```html
 <div id="example"></div>
-<a href id="remove">Remove Loader</a>
+<button id="remove">Remove Loader</button>
 
 <script>
 var loader = Rocket.loader({
