@@ -15,10 +15,10 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrishumboldt/Loaderplate.git"
+    "url": "https://github.com/chrishumboldt/Rocket-Loader.git"
   },
   "bugs": {
-    "url": "https://github.com/chrishumboldt/Loaderplate/issues"
+    "url": "https://github.com/chrishumboldt/Rocket-Loader/issues"
   },
   "engines": {
      "npm": "^3.0.0"
