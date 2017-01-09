@@ -2,37 +2,58 @@
  * Author: Chris Humboldt
 **/
 
-.loader {
+.rocket-loader {
    @include position(relative);
-   @include show();
-   @include height($loader-size);
+   @include show;
    @include margin-vertical($loader-size);
    @include text-align(center);
    @include overflow(hidden);
-   // Inner
-   .loader-inner {
-      @include spacing-no();
-      @include position(absolute, top 50% left 50% margin-left $loader-size-half margin-top $loader-size-half);
+   // Loader
+   .rl-loader {
+      @include spacing-no;
+      @include position(relative);
       @include square($loader-size);
+      @include center;
       @include animate(all);
    }
-   // Sizes
-   &._small {
-      @include height($loader-size-small);
-      @include margin-vertical($loader-size-small);
-      .loader-inner {
-         @include position-set(margin-left $loader-size-half-small margin-top $loader-size-half-small);
+   // Body
+   .rl-body {
+      @include show;
+      @include padding-top($space-small);
+      @include text-colour($grey-blue);
+      @include text-size(16px);
+   }
+   @each $colour-name, $colour in $ar-colours-primary {
+      &._c-#{$colour-name} .rl-body {
+         @include text-colour($colour);
       }
    }
-   &._large {
-      @include height($loader-size-large);
+   // Sizes
+   &._s-small {
+      @include margin-vertical($loader-size-small);
+      .rl-loader {
+         @include square($loader-size-small);
+      }
+      .rl-body {
+         @include padding-top($space-x-small);
+         @include text-size(14px);
+      }
+   }
+   &._s-large {
       @include margin-vertical($loader-size-large);
-      .loader-inner {
-         @include position-set(margin-left $loader-size-half-large margin-top $loader-size-half-large);
+      .rl-loader {
+         @include square($loader-size-large);
+      }
+      .rl-body {
+         @include padding-top($space-minor);
       }
    }
 }
+.loader-hide,
+._show.loade-hide {
+   @include hide;
+}
 .loader-show,
 ._hide.loader-show {
-   @include show();
+   @include show;
 }

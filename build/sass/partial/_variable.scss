@@ -2,9 +2,16 @@
  * Author: Chris Humboldt
 **/
 
-$loader-size: 36px;
+$loader-size: 40px;
 $loader-size-small: $loader-size - 10px;
-$loader-size-large: $loader-size + 8px;
+$loader-size-large: $loader-size + 10px;
 $loader-size-half: -$loader-size / 2;
 $loader-size-half-small: -$loader-size-small / 2;
 $loader-size-half-large: -$loader-size-large / 2;
+
+$dot-size: 24px;
+$dot-size-half: -$dot-size / 2;
+$dot-size-small: 16px;
+$dot-size-half-small: -$dot-size-small / 2;
+$dot-size-large: 36px;
+$dot-size-half-large: -$dot-size-large / 2;
