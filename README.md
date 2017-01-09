@@ -1,5 +1,12 @@
 # Rocket Loader
-A simple Javascript loading module.
+An animated loader graphic module.
+
+* [Getting Started](#getting-started)
+* [Basic Example](#basic-example)
+* [Javascript Options](#javascript-options)
+	* [Defaults](#defaults)
+* [Rocket Tools](#rocket-tools)
+* [Buttonplate Deprecated](#buttonplate-deprecated)
 
 ## Getting Started
 You can either download a copy of the source files or install Rocket Loader via NPM.
