@@ -26,7 +26,8 @@ var RockMod_Loader;
                     elm.style.display = 'none';
                     elm.parentNode.insertBefore(loader, elm);
                 }
-            }, options.delay);
+            }, options.delay * 1000);
+            console.log(options.delay * 1000);
         }
         function remove(type) {
             if (isElement(loader)) {

@@ -23,11 +23,11 @@ Below is an example of executing the component complete with required HTML and J
 ```html
 <div id="example"></div>
 <a href id="remove">Remove Loader</a>
+
 <script>
 var loader = Rocket.loader({
    selector: '#example',
-   body: 'Loader Works!',
-   type: 'puff'
+   type: 'pulse'
 });
 document.getElementById('remove').onclick = function() {
    loader.remove();
@@ -38,20 +38,22 @@ document.getElementById('remove').onclick = function() {
 ## Javascript Options
 See the different options you have available on component call.
 
-| Name | Default | Options | Description |
-| ---- | ---- | ---- | ---- |
-| selector | false | | Set the HTML selector. |
-| body | false | | **NOTE** that the false value will display no text. |
-| colour | grey-blue | aqua, black, blue, green, grey-blue, grey-blue-dark, orange, pink, purple, red, white, yellow | Set the loader colour. |
-| delay | 400 | | Set a delay on the loader showing. |
-| size | large | x-small, small, minor, normal, slight, medium, large, x-large | Set the size of the loader and its padding. |
-| type | puff | puff, spinner | Set the loader type. |
+Name | Default | Options | Description
+---- | ---- | ---- | ----
+`selector` | false | | Set the HTML selector. Can also be an element.
+`append` | false | `true` `false` | Append the loader to the `selector` element.
+`body` | '' | | **NOTE** that an empty value will display no text.
+`colour` | `grey-blue` | `aqua`, `black`, `blue`, `green`, `grey-blue`, `grey-blue-dark`, `orange`, `pink`, `purple`, `red`, `white`, `yellow` | Set the loader colour.
+`delay` | 0 | | Set a delay (in seconds) on the loader showing.
+`size` | `normal` | `small`, `normal`, `large` | Set the size of the loader and its padding.
+`type` | `spinner` | `dots`, `pulse`, `spinner` | Set the loader type.
 
 #### Defaults
 You can also overwrite the options globally by altering the Rocket defaults. To do so reference the defaults object property, for example:
 
 ```javascript
-Rocket.defaults.loader.type = 'spinner';
+Rocket.defaults.loader.body = 'Loading';
+Rocket.defaults.loader.type = 'dots';
 ```
 
 ## Rocket Tools
