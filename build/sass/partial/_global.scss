@@ -5,9 +5,12 @@
 .rocket-loader {
    @include position(relative);
    @include show;
-   @include margin-vertical($loader-size);
    @include text-align(center);
    @include overflow(hidden);
+   // Inner
+   .rl-inner {
+      @include padding-vertical($loader-size);
+   }
    // Loader
    .rl-loader {
       @include spacing-no;
@@ -30,7 +33,9 @@
    }
    // Sizes
    &._s-small {
-      @include margin-vertical($loader-size-small);
+      .rl-inner {
+         @include padding-vertical($loader-size-small);
+      }
       .rl-loader {
          @include square($loader-size-small);
       }
@@ -40,7 +45,9 @@
       }
    }
    &._s-large {
-      @include margin-vertical($loader-size-large);
+      .rl-inner {
+         @include padding-vertical($loader-size-large);
+      }
       .rl-loader {
          @include square($loader-size-large);
       }

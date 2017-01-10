@@ -49,8 +49,10 @@ var RockMod_Loader;
     ;
     function createLoader(options) {
         var loaderContainer = document.createElement('div');
+        var loaderInner = document.createElement('div');
         var loader = document.createElement('div');
         loaderContainer.className = 'rocket-loader _t-' + options.type + ' _c-' + options.colour + ' _s-' + options.size;
+        loaderInner.className = 'rl-inner';
         loader.className = 'rl-loader';
         switch (options.type) {
             case 'dots':
@@ -62,7 +64,8 @@ var RockMod_Loader;
             default:
                 loader.innerHTML = '<div class="part-one"></div>';
         }
-        loaderContainer.appendChild(loader);
+        loaderInner.appendChild(loader);
+        loaderContainer.appendChild(loaderInner);
         if (options.body.length > 0) {
             var textBody = document.createElement('div');
             textBody.className = 'rl-body';
