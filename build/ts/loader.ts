@@ -38,7 +38,6 @@ module RockMod_Loader {
                elm.parentNode.insertBefore(loader, elm);
             }
          }, options.delay * 1000);
-         console.log(options.delay * 1000);
       }
 
       function remove(type: string) {
