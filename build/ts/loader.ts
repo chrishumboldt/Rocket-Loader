@@ -62,8 +62,10 @@ module RockMod_Loader {
 
    function createLoader(options: options) {
       const loaderContainer = document.createElement('div');
+      const loaderInner = document.createElement('div');
       const loader = document.createElement('div');
       loaderContainer.className = 'rocket-loader _t-' + options.type + ' _c-' + options.colour + ' _s-' + options.size;
+      loaderInner.className = 'rl-inner';
       loader.className = 'rl-loader';
 
       // Loader parts
@@ -79,7 +81,8 @@ module RockMod_Loader {
          default:
             loader.innerHTML = '<div class="part-one"></div>';
       }
-      loaderContainer.appendChild(loader);
+      loaderInner.appendChild(loader);
+      loaderContainer.appendChild(loaderInner);
 
       // Loader text
       if (options.body.length > 0) {
