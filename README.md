@@ -34,7 +34,7 @@ Below is an example of executing the module complete with required HTML and Java
 <!-- Scripts -->
 <script>
 var loader = Rocket.loader({
-   selector: '#example',
+   target: '#example',
    type: 'pulse'
 });
 document.getElementById('remove').onclick = function() {
@@ -48,8 +48,8 @@ See the different options you have available on module call.
 
 Name | Default | Options | Description
 ---- | ---- | ---- | ----
-`selector` | | | Set the HTML selector. Can also be an element.
-`append` | `false` | `true` `false` | Append the loader to the `selector` element as opposed to hiding.
+`target` | | | Set the HTML target. Can also be an element.
+`append` | `false` | `true` `false` | Append the loader to the `target` element as opposed to hiding.
 `body` | | | **NOTE** that an empty value will display no text.
 `colour` | `grey-blue` | `aqua` `black` `blue` `green` `grey-blue` `grey-blue-dark` `orange` `pink` `purple` `red` `white` `yellow` | Set the loader colour.
 `delay` | 0 | | Set a delay (in seconds) on the loader showing.

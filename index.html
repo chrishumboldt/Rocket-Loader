@@ -45,7 +45,7 @@ npm install rocket-loader
 
 &lt;script&gt;
 var loader = Rocket.loader({
-   selector: '#example'
+   target: '#example'
 });
 document.getElementById('remove').onclick = function() {
    loader.remove();
@@ -75,7 +75,8 @@ document.getElementById('remove').onclick = function() {
    <script src="js/loader.min.js"></script>
 	<script>
    var loader = Rocket.loader({
-      selector: '#example'
+      target: '#example',
+      body: 'This is a test.'
    });
    document.getElementById('remove').onclick = function() {
       loader.remove();
