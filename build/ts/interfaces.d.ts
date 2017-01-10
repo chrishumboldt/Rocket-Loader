@@ -3,7 +3,7 @@
 **/
 
 export interface options {
-   selector: any;
+   target: any;
    append: boolean;
    body: string;
    colour: string;

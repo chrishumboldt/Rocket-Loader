@@ -12,7 +12,7 @@ if (!Rocket.defaults) {
 	Rocket.defaults = {};
 }
 Rocket.defaults.loader = {
-   selector: '',
+   target: '',
    append: false,
    body: '',
    colour: 'grey-blue',
@@ -82,15 +82,16 @@ module RockMod_Loader {
             loader.innerHTML = '<div class="part-one"></div>';
       }
       loaderInner.appendChild(loader);
-      loaderContainer.appendChild(loaderInner);
 
       // Loader text
       if (options.body.length > 0) {
          const textBody = document.createElement('div');
          textBody.className = 'rl-body';
          textBody.innerHTML = options.body;
-         loaderContainer.appendChild(textBody);
+         loaderInner.appendChild(textBody);
       }
+      loaderContainer.appendChild(loaderInner);
+
       return loaderContainer;
    }
 
@@ -113,18 +114,18 @@ module RockMod_Loader {
    // Initialiser
    function initialiser(uOptions: options) {
       // Catch
-      if (typeof uOptions !== 'object' || (typeof uOptions.selector !== 'string' && !isElement(uOptions.selector))) {
+      if (typeof uOptions !== 'object' || (typeof uOptions.target !== 'string' && !isElement(uOptions.target))) {
          return false;
       }
       // Continue
-      const elm = (typeof uOptions.selector !== 'string') ? uOptions.selector : document.querySelector(uOptions.selector);
+      const elm = (typeof uOptions.target !== 'string') ? uOptions.target : document.querySelector(uOptions.target);
       // Catch
       if (!isElement) {
          return false;
       }
       // Continue
       const options = {
-         selector: setDefault(uOptions.selector, Rocket.defaults.loader.selector),
+         target: setDefault(uOptions.target, Rocket.defaults.loader.target),
          append: setDefault(uOptions.append, Rocket.defaults.loader.append),
          body: setDefault(uOptions.body, Rocket.defaults.loader.body),
          colour: setDefault(uOptions.colour, Rocket.defaults.loader.colour),
