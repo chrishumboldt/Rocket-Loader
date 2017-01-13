@@ -29,13 +29,15 @@ var RockMod_Loader;
             }, options.delay * 1000);
         }
         function remove(type) {
-            if (isElement(loader)) {
-                loader.parentNode.removeChild(loader);
-            }
-            if (isElement(elm)) {
-                var showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
-                elm.style.display = showType;
-            }
+            setTimeout(function () {
+                if (isElement(loader)) {
+                    loader.parentNode.removeChild(loader);
+                }
+                if (isElement(elm)) {
+                    var showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
+                    elm.style.display = showType;
+                }
+            });
         }
         ;
         add();

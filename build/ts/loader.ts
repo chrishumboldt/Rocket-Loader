@@ -41,13 +41,15 @@ module RockMod_Loader {
       }
 
       function remove(type: string) {
-         if (isElement(loader)) {
-            loader.parentNode.removeChild(loader);
-         }
-         if (isElement(elm)) {
-            let showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
-            elm.style.display = showType;
-         }
+         setTimeout(function () {
+            if (isElement(loader)) {
+               loader.parentNode.removeChild(loader);
+            }
+            if (isElement(elm)) {
+               let showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
+               elm.style.display = showType;
+            }
+         });
       };
 
       // Execute and return
