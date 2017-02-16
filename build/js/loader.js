@@ -1,8 +1,3 @@
-"use strict";
-var Rocket = (typeof Rocket === 'object') ? Rocket : {};
-if (!Rocket.defaults) {
-    Rocket.defaults = {};
-}
 Rocket.defaults.loader = {
     target: '',
     append: false,
@@ -30,10 +25,10 @@ var RockMod_Loader;
         }
         function remove(type) {
             setTimeout(function () {
-                if (isElement(loader)) {
+                if (Rocket.is.element(loader)) {
                     loader.parentNode.removeChild(loader);
                 }
-                if (isElement(elm)) {
+                if (Rocket.is.element(elm)) {
                     var showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
                     elm.style.display = showType;
                 }
@@ -75,45 +70,26 @@ var RockMod_Loader;
         loaderContainer.appendChild(loaderInner);
         return loaderContainer;
     }
-    function isElement(elm) {
-        return (elm.nodeType && elm.nodeType === 1) ? true : false;
-    }
-    ;
-    function setDefault(setValue, defaultValue) {
-        if (typeof setValue == 'undefined' && typeof defaultValue == 'undefined') {
+    function init(uOptions) {
+        if (!Rocket.is.object(uOptions) || (!Rocket.is.string(uOptions.target) && !Rocket.is.element(uOptions.target))) {
             return false;
         }
-        else if (typeof setValue != 'undefined' && typeof defaultValue == 'undefined') {
-            return setValue;
-        }
-        else if (typeof setValue === typeof defaultValue) {
-            return setValue;
-        }
-        else {
-            return defaultValue;
-        }
-    }
-    ;
-    function initialiser(uOptions) {
-        if (typeof uOptions !== 'object' || (typeof uOptions.target !== 'string' && !isElement(uOptions.target))) {
-            return false;
-        }
-        var elm = (typeof uOptions.target !== 'string') ? uOptions.target : document.querySelector(uOptions.target);
-        if (!isElement) {
+        var elm = (!Rocket.is.string(uOptions.target)) ? uOptions.target : document.querySelector(uOptions.target);
+        if (!Rocket.is.element(elm)) {
             return false;
         }
         var options = {
-            target: setDefault(uOptions.target, Rocket.defaults.loader.target),
-            append: setDefault(uOptions.append, Rocket.defaults.loader.append),
-            body: setDefault(uOptions.body, Rocket.defaults.loader.body),
-            colour: setDefault(uOptions.colour, Rocket.defaults.loader.colour),
-            delay: setDefault(uOptions.delay, Rocket.defaults.loader.delay),
-            size: setDefault(uOptions.size, Rocket.defaults.loader.size),
-            type: setDefault(uOptions.type, Rocket.defaults.loader.type),
+            target: Rocket.helper.setDefault(uOptions.target, Rocket.defaults.loader.target),
+            append: Rocket.helper.setDefault(uOptions.append, Rocket.defaults.loader.append),
+            body: Rocket.helper.setDefault(uOptions.body, Rocket.defaults.loader.body),
+            colour: Rocket.helper.setDefault(uOptions.colour, Rocket.defaults.loader.colour),
+            delay: Rocket.helper.setDefault(uOptions.delay, Rocket.defaults.loader.delay),
+            size: Rocket.helper.setDefault(uOptions.size, Rocket.defaults.loader.size),
+            type: Rocket.helper.setDefault(uOptions.type, Rocket.defaults.loader.type),
         };
         return applyLoader(elm, options);
     }
+    RockMod_Loader.init = init;
     ;
-    RockMod_Loader.init = initialiser;
 })(RockMod_Loader || (RockMod_Loader = {}));
 Rocket.loader = RockMod_Loader.init;

@@ -1,6 +1,6 @@
 {
   "name": "rocket-loader",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "An animated loader graphic module.",
   "main": "index.html",
   "keywords": [
@@ -21,10 +21,11 @@
     "url": "https://github.com/chrishumboldt/Rocket-Loader/issues"
   },
   "engines": {
-     "npm": "^3.0.0"
+    "npm": "^3.0.0"
   },
   "dependencies": {
-    "rocket-propel": "^3.0.3"
+    "rocket-propel": "^3.0.3",
+    "rocket-tools": "^1.12.6"
   },
   "devDependencies": {
     "rocket-demo": "^2.0.1"

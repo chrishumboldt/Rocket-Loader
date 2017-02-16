@@ -1,16 +1,8 @@
-/**
- * Author: Chris Humboldt
-**/
-
-import { options } from './interfaces';
+/*
+Author: Chris Humboldt
+*/
 
 // Rocket module extension
-// NOTE: You do not need Rocket for this module to be used.
-// This allows you to extend Rocket or use independently. Both will work.
-var Rocket = (typeof Rocket === 'object') ? Rocket : {};
-if (!Rocket.defaults) {
-	Rocket.defaults = {};
-}
 Rocket.defaults.loader = {
    target: '',
    append: false,
@@ -21,7 +13,7 @@ Rocket.defaults.loader = {
    type: 'spinner'
 };
 
-// Module
+// Module container
 module RockMod_Loader {
    // Functions
    function applyLoader(elm: any, options: options) {
@@ -30,7 +22,7 @@ module RockMod_Loader {
 
       // Functions
       function add() {
-         setTimeout(function () {
+         setTimeout(() => {
             if (options.append) {
                elm.appendChild(loader);
             } else {
@@ -41,11 +33,11 @@ module RockMod_Loader {
       }
 
       function remove(type: string) {
-         setTimeout(function () {
-            if (isElement(loader)) {
+         setTimeout(() => {
+            if (Rocket.is.element(loader)) {
                loader.parentNode.removeChild(loader);
             }
-            if (isElement(elm)) {
+            if (Rocket.is.element(elm)) {
                let showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
                elm.style.display = showType;
             }
@@ -65,6 +57,7 @@ module RockMod_Loader {
       const loaderContainer = document.createElement('div');
       const loaderInner = document.createElement('div');
       const loader = document.createElement('div');
+
       loaderContainer.className = 'rocket-loader _t-' + options.type + ' _c-' + options.colour + ' _s-' + options.size;
       loaderInner.className = 'rl-inner';
       loader.className = 'rl-loader';
@@ -96,50 +89,34 @@ module RockMod_Loader {
       return loaderContainer;
    }
 
-   function isElement(elm: any) {
-      return (elm.nodeType && elm.nodeType === 1) ? true : false;
-   };
-
-   function setDefault(setValue: any, defaultValue: any) {
-      if (typeof setValue == 'undefined' && typeof defaultValue == 'undefined') {
-         return false;
-      } else if (typeof setValue != 'undefined' && typeof defaultValue == 'undefined') {
-         return setValue;
-      } else if (typeof setValue === typeof defaultValue) {
-         return setValue;
-      } else {
-         return defaultValue;
-      }
-   };
-
    // Initialiser
-   function initialiser(uOptions: options) {
+   export function init(uOptions: options) {
       // Catch
-      if (typeof uOptions !== 'object' || (typeof uOptions.target !== 'string' && !isElement(uOptions.target))) {
+      if (!Rocket.is.object(uOptions) || (!Rocket.is.string(uOptions.target) && !Rocket.is.element(uOptions.target))) {
          return false;
       }
+
       // Continue
-      const elm = (typeof uOptions.target !== 'string') ? uOptions.target : document.querySelector(uOptions.target);
+      const elm = (!Rocket.is.string(uOptions.target)) ? uOptions.target : document.querySelector(uOptions.target);
+
       // Catch
-      if (!isElement) {
+      if (!Rocket.is.element(elm)) {
          return false;
       }
+
       // Continue
       const options = {
-         target: setDefault(uOptions.target, Rocket.defaults.loader.target),
-         append: setDefault(uOptions.append, Rocket.defaults.loader.append),
-         body: setDefault(uOptions.body, Rocket.defaults.loader.body),
-         colour: setDefault(uOptions.colour, Rocket.defaults.loader.colour),
-         delay: setDefault(uOptions.delay, Rocket.defaults.loader.delay),
-         size: setDefault(uOptions.size, Rocket.defaults.loader.size),
-         type: setDefault(uOptions.type, Rocket.defaults.loader.type),
+         target: Rocket.helper.setDefault(uOptions.target, Rocket.defaults.loader.target),
+         append: Rocket.helper.setDefault(uOptions.append, Rocket.defaults.loader.append),
+         body: Rocket.helper.setDefault(uOptions.body, Rocket.defaults.loader.body),
+         colour: Rocket.helper.setDefault(uOptions.colour, Rocket.defaults.loader.colour),
+         delay: Rocket.helper.setDefault(uOptions.delay, Rocket.defaults.loader.delay),
+         size: Rocket.helper.setDefault(uOptions.size, Rocket.defaults.loader.size),
+         type: Rocket.helper.setDefault(uOptions.type, Rocket.defaults.loader.type),
       };
 
       return applyLoader(elm, options);
    };
-
-   // Export
-   export const init = initialiser;
 }
 
 // Bind to Rocket
