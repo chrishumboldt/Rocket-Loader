@@ -21,18 +21,20 @@
 	      <div class="container"><h2>Rocket Loader Module</h2></div>
 	   </div>
 		<div class="container">
-	      <h4>Getting Started</h4>
-			<p>You can either download a copy of the <a href="https://github.com/chrishumboldt/Rocket-Loader/archive/master.zip" class="link">source files</a> or install via NPM.</p>
+         <h4>Getting Started</h4>
+			<p>Install via NPM.</p>
 <pre class="prettyprint linenums">
 npm install rocket-loader
 </pre>
-         <p>Start by including the necessary files.</p>
+         <p class="note">Note that this module has a dependency <a href="https://github.com/chrishumboldt/Rocket-Tools" class="link" target="_blank">Rocket Tools (21kb)</a> which will automatically be installed as well.</p>
+			<p>Start by including the necessary files.</p>
 <pre class="prettyprint linenums">
 &lt;head&gt;
    &lt;link href="rocket-loader/css/loader.min.css" rel="stylesheet" type="text/css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
    /* Your content goes here */
+   &lt;script src="rocket-tools/js/tools.min.js"&gt;&lt;/script&gt;
    &lt;script src="rocket-loader/js/loader.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 </pre>
@@ -72,6 +74,7 @@ document.getElementById('remove').onclick = function() {
 
    <!-- Scripts -->
    <script src="node_modules/rocket-demo/js/demo.min.js"></script>
+   <script src="node_modules/rocket-tools/js/tools.min.js"></script>
    <script src="js/loader.min.js"></script>
 	<script>
    var loader = Rocket.loader({

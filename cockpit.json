@@ -1,7 +1,11 @@
 {
 	"build": [{
 		"name": "loader",
-		"js": ["loader.js"],
-		"css": ["loader.scss"]
+		"js": [
+         "~/loader.js"
+      ],
+		"css": [
+         "~/loader.scss"
+      ]
 	}]
 }

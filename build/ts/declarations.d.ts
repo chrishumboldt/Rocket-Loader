@@ -1,8 +1,8 @@
-/**
- * Author: Chris Humboldt
-**/
+/*
+Author: Chris Humboldt
+*/
 
-export interface options {
+declare interface options {
    target: any;
    append: boolean;
    body: string;

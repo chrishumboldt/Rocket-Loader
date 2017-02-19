@@ -5,14 +5,15 @@ An animated loader graphic module.
 * [Basic Example](#basic-example)
 * [Javascript Options](#javascript-options)
 	* [Defaults](#defaults)
-* [Rocket Tools](#rocket-tools)
-* [Buttonplate Deprecated](#buttonplate-deprecated)
 
 ## Getting Started
-You can either download a copy of the source files or install Rocket Loader via NPM.
+Install via NPM.
+
 ```
 npm install rocket-loader
 ```
+
+**NOTE** that this module has a dependency [Rocket Tools (21kb)](https://github.com/chrishumboldt/Rocket-Tools) which will automatically be installed as well.
 
 Start by including the necessary files.
 ```html
@@ -21,6 +22,7 @@ Start by including the necessary files.
 </head>
 <body>
    /* Your content goes here */
+   <script src="rocket-tools/js/tools.min.js"></script>
    <script src="rocket-loader/js/loader.min.js"></script>
 </body>
 ```
@@ -64,12 +66,6 @@ Rocket.defaults.loader.body = 'Loading';
 Rocket.defaults.loader.type = 'dots';
 ```
 
-## Rocket Tools
-If you are using this module in conjunction with [Rocket Tools](https://github.com/chrishumboldt/Rocket-Tools), then **always** load the Rocket Tools library first. This module extends that library when detected.
-
-## Loaderplate Deprecated
-The original library, Loaderplate, has been deprecated. The entire Webplate project is being refactored and rebranded with a new development philosophy. Loaderplate will be maintained only with bug fixes under the **Loaderplate** branch.
-
 ## Author
 Created and maintained by Chris Humboldt<br>
 Website: <a href="http://chrishumboldt.com/">chrishumboldt.com</a><br>
@@ -77,7 +73,7 @@ Twitter: <a href="https://twitter.com/chrishumboldt">twitter.com/chrishumboldt</
 GitHub <a href="https://github.com/chrishumboldt">github.com/chrishumboldt</a><br>
 
 ## Copyright and License
-Copyright 2016 Rocket Project
+Copyright 2017 Rocket Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
