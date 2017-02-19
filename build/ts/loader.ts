@@ -38,7 +38,7 @@ module RockMod_Loader {
                loader.parentNode.removeChild(loader);
             }
             if (Rocket.is.element(elm)) {
-               let showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
+               let showType = (Rocket.is.string(type)) ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
                elm.style.display = showType;
             }
          });

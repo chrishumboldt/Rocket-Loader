@@ -24,10 +24,10 @@
     "npm": "^3.0.0"
   },
   "dependencies": {
-    "rocket-propel": "^3.0.3",
     "rocket-tools": "^1.12.6"
   },
   "devDependencies": {
-    "rocket-demo": "^2.0.1"
+    "rocket-demo": "^2.0.1",
+   "rocket-propel": "^3.0.3"
   }
 }

@@ -29,7 +29,7 @@ var RockMod_Loader;
                     loader.parentNode.removeChild(loader);
                 }
                 if (Rocket.is.element(elm)) {
-                    var showType = (typeof type === 'string') ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
+                    var showType = (Rocket.is.string(type)) ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
                     elm.style.display = showType;
                 }
             });
