@@ -1,5 +1,5 @@
 /**
- * Author: Chris Humboldt
+@author Chris Humboldt
 **/
 
 @mixin loader-spinner {
@@ -10,7 +10,7 @@
          @include border-radius(50%);
          @include border(lighten($grey-blue, 20%), 3px);
          @include border-top($grey-blue, 3px);
-         @include animation(spin, 1s, infinite);
+         @include animation(rocketloaderspin, 1s, infinite);
       }
       // Colours
       @each $colour-name, $colour in $ar-colours-primary {
@@ -47,7 +47,7 @@
    }
 
    // Animation
-   @include keyframes(spin) {
+   @include keyframes(rocketloaderspin) {
       0% {
          @include transform-rotate(0deg);
       }

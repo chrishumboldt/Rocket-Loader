@@ -1,5 +1,5 @@
 /**
- * Author: Chris Humboldt
+@author Chris Humboldt
 **/
 
 @mixin loader-pulse {
@@ -12,7 +12,7 @@
          @include border-radius(50%);
          @include border($grey-blue, 3px);
          @include opacity(0);
-         @include animation(pulse, 1.4s, infinite);
+         @include animation(rocketloaderpulse, 1.4s, infinite);
       }
       .part-two {
          @include animation-delay(0.5s);
@@ -43,7 +43,7 @@
    }
 
    // Animation
-   @include keyframes(pulse) {
+   @include keyframes(rocketloaderpulse) {
       0% {
          @include opacity(0);
          @include transform-scale-3d(0, 0, 0);

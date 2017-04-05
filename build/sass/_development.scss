@@ -1,14 +1,14 @@
 /**
- * Author: Chris Humboldt
+@author Chris Humboldt
 **/
 
 @import "../../node_modules/rocket-propel/build/sass/import";
 
-@import "partial/variable";
-@import "partial/global";
+@import "part/variable";
+@import "part/global";
 
-@import "partial/dots";
-@import "partial/pulse";
-@import "partial/spinner";
+@import "part/dots";
+@import "part/pulse";
+@import "part/spinner";
 
-@import "partial/css";
+@import "part/css";
