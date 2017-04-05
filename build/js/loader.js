@@ -1,3 +1,7 @@
+/**
+@author Chris Humboldt
+**/
+// Rocket module extension
 Rocket.defaults.loader = {
     target: '',
     append: false,
@@ -7,11 +11,14 @@ Rocket.defaults.loader = {
     size: 'normal',
     type: 'spinner'
 };
+// Module container
 var RockMod_Loader;
 (function (RockMod_Loader) {
+    // Functions
     function applyLoader(elm, options) {
         var loader = createLoader(options);
         var elmDisplay = elm.style.display;
+        // Functions
         function add() {
             setTimeout(function () {
                 if (options.append) {
@@ -35,6 +42,7 @@ var RockMod_Loader;
             });
         }
         ;
+        // Execute and return
         add();
         return {
             loader: elm,
@@ -50,6 +58,7 @@ var RockMod_Loader;
         loaderContainer.className = 'rocket-loader _t-' + options.type + ' _c-' + options.colour + ' _s-' + options.size;
         loaderInner.className = 'rl-inner';
         loader.className = 'rl-loader';
+        // Loader parts
         switch (options.type) {
             case 'dots':
                 loader.innerHTML = '<div class="part-one"></div><div class="part-two"></div><div class="part-three"></div>';
@@ -61,6 +70,7 @@ var RockMod_Loader;
                 loader.innerHTML = '<div class="part-one"></div>';
         }
         loaderInner.appendChild(loader);
+        // Loader text
         if (options.body.length > 0) {
             var textBody = document.createElement('div');
             textBody.className = 'rl-body';
@@ -70,14 +80,19 @@ var RockMod_Loader;
         loaderContainer.appendChild(loaderInner);
         return loaderContainer;
     }
+    // Initialiser
     function init(uOptions) {
+        // Catch
         if (!Rocket.is.object(uOptions) || (!Rocket.is.string(uOptions.target) && !Rocket.is.element(uOptions.target))) {
             return false;
         }
+        // Continue
         var elm = (!Rocket.is.string(uOptions.target)) ? uOptions.target : document.querySelector(uOptions.target);
+        // Catch
         if (!Rocket.is.element(elm)) {
             return false;
         }
+        // Continue
         var options = {
             target: Rocket.helper.setDefault(uOptions.target, Rocket.defaults.loader.target),
             append: Rocket.helper.setDefault(uOptions.append, Rocket.defaults.loader.append),
@@ -92,4 +107,5 @@ var RockMod_Loader;
     RockMod_Loader.init = init;
     ;
 })(RockMod_Loader || (RockMod_Loader = {}));
+// Bind to Rocket
 Rocket.loader = RockMod_Loader.init;

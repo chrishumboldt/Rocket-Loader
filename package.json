@@ -1,33 +1,33 @@
 {
-  "name": "rocket-loader",
-  "version": "2.2.3",
-  "description": "An animated loader graphic module.",
-  "main": "index.html",
-  "keywords": [
-    "Rocket",
-    "Part",
-    "Module",
-    "Loader",
-    "Javascript",
-    "CSS"
-  ],
-  "author": "Chris Humboldt",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chrishumboldt/Rocket-Loader.git"
-  },
-  "bugs": {
-    "url": "https://github.com/chrishumboldt/Rocket-Loader/issues"
-  },
-  "engines": {
-    "npm": "^3.0.0"
-  },
-  "dependencies": {
-    "rocket-tools": "^1.12.6"
-  },
-  "devDependencies": {
-    "rocket-demo": "^2.0.1",
-   "rocket-propel": "^3.0.3"
-  }
+   "name": "rocket-loader",
+   "version": "2.2.4",
+   "description": "An animated loader graphic module.",
+   "main": "index.html",
+   "keywords": [
+      "Rocket",
+      "Part",
+      "Module",
+      "Loader",
+      "Javascript",
+      "CSS"
+   ],
+   "author": "Chris Humboldt",
+   "license": "Apache-2.0",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/chrishumboldt/Rocket-Loader.git"
+   },
+   "bugs": {
+      "url": "https://github.com/chrishumboldt/Rocket-Loader/issues"
+   },
+   "engines": {
+      "npm": "^3.0.0"
+   },
+   "dependencies": {
+      "rocket-tools": "^1.12.6"
+   },
+   "devDependencies": {
+      "rocket-demo": "^2.0.1",
+      "rocket-propel": "^3.0.3"
+   }
 }
