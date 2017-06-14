@@ -23,23 +23,31 @@ module RockMod_Loader {
       // Functions
       function add() {
          setTimeout(() => {
-            if (options.append) {
-               elm.appendChild(loader);
-            } else {
-               elm.style.display = 'none';
-               elm.parentNode.insertBefore(loader, elm);
+            if (elm.getAttribute('data-rocket-loader') !== 'true') {
+               elm.setAttribute('data-rocket-loader', 'true');
+
+               if (options.append) {
+                  elm.appendChild(loader);
+               } else {
+                  elm.style.display = 'none';
+                  elm.parentNode.insertBefore(loader, elm);
+               }
             }
          }, options.delay * 1000);
       }
 
       function remove(type: string) {
          setTimeout(() => {
-            if (Rocket.is.element(loader)) {
-               loader.parentNode.removeChild(loader);
-            }
-            if (Rocket.is.element(elm)) {
-               let showType = (Rocket.is.string(type)) ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
-               elm.style.display = showType;
+            if (elm.getAttribute('data-rocket-loader') === 'true') {
+               elm.removeAttribute('data-rocket-loader');
+
+               if (Rocket.is.element(loader)) {
+                  loader.parentNode.removeChild(loader);
+               }
+               if (Rocket.is.element(elm)) {
+                  let showType = (Rocket.is.string(type)) ? type : (elmDisplay === '' || elmDisplay === 'none') ? '' : elmDisplay;
+                  elm.style.display = showType;
+               }
             }
          });
       };
