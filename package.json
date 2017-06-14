@@ -1,6 +1,6 @@
 {
    "name": "rocket-loader",
-   "version": "2.2.4",
+   "version": "2.2.5",
    "description": "An animated loader graphic module.",
    "main": "index.html",
    "keywords": [
@@ -24,7 +24,7 @@
       "npm": "^3.0.0"
    },
    "dependencies": {
-      "rocket-tools": "^1.12.6"
+      "rocket-tools": "^1.14.3"
    },
    "devDependencies": {
       "rocket-demo": "^2.0.1",
