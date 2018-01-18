@@ -46,15 +46,15 @@ npm install rocket-loader
 &lt;button id="remove"&gt;Remove Loader&lt;/button&gt;
 
 &lt;script&gt;
-var loader = Rocket.loader({
-   target: '#example'
+const loader = Rocket.loader({
+   target: '#example',
+   body: 'This is loading...'
 });
-document.getElementById('remove').onclick = function() {
-   loader.remove();
-};
+
+Rocket.event.add('#remove', 'click', () => { loader.remove(); });
 &lt;/script&gt;
 </pre>
-         <div id="example"></div>
+         <div id="example" style="display: none;"></div>
          <button id="remove">Remove Loader</button>
          <br>
          <h4>Detailed Documentation</h4>
@@ -75,15 +75,10 @@ document.getElementById('remove').onclick = function() {
    <!-- Scripts -->
    <script src="node_modules/rocket-demo/js/demo.min.js"></script>
    <script src="node_modules/rocket-tools/js/tools.min.js"></script>
-   <script src="js/loader.min.js"></script>
+   <script src="build/js/loader.js"></script>
 	<script>
-   var loader = Rocket.loader({
-      target: '#example',
-      body: 'This is a test.'
-   });
-   document.getElementById('remove').onclick = function() {
-      loader.remove();
-   };
+   const loader = Rocket.loader({target: '#example', body: 'This is loading...'});
+   Rocket.event.add('#remove', 'click', () => { loader.remove(); });
 	</script>
 
 </body>

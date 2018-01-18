@@ -5,6 +5,7 @@ An animated loader graphic module.
 * [Basic Example](#basic-example)
 * [Javascript Options](#javascript-options)
 	* [Defaults](#defaults)
+* [Rebuilding Files](#rebuilding-files)
 
 ## Getting Started
 Install via NPM.
@@ -65,6 +66,21 @@ You can also overwrite the options globally by altering the Rocket defaults. To 
 Rocket.defaults.loader.body = 'Loading';
 Rocket.defaults.loader.type = 'dots';
 ```
+
+## Rebuilding Files
+In order to rebuild production files you will first need to install the [Rocket Command Line Tool](https://github.com/chrishumboldt/Rocket-Command). To do so run the following npm command in your terminal. **NOTE** that this package is installed globally and can take a while as it has quite a few dependencies.
+
+```
+npm install rocket-command -g
+```
+
+Once installed navigate to the Rocket Loader root and run the following command:
+
+```
+rocket build
+```
+
+The relevant minified CSS and JS will now be rebuilt.
 
 ## Author
 Created and maintained by Chris Humboldt<br>
