@@ -26,7 +26,7 @@
 <pre class="prettyprint linenums">
 npm install rocket-loader
 </pre>
-         <p class="note">Note that this module has a dependency <a href="https://github.com/chrishumboldt/Rocket-Tools" class="link" target="_blank">Rocket Tools (21kb)</a> which will automatically be installed as well.</p>
+         <p class="note">Note that this module has a dependency <a href="https://github.com/chrishumboldt/Rocket-Tools" class="link" target="_blank">Rocket Tools (28kb)</a> which will automatically be installed as well.</p>
 			<p>Start by including the necessary files.</p>
 <pre class="prettyprint linenums">
 &lt;head&gt;
@@ -46,15 +46,15 @@ npm install rocket-loader
 &lt;button id="remove"&gt;Remove Loader&lt;/button&gt;
 
 &lt;script&gt;
-var loader = Rocket.loader({
-   target: '#example'
+const loader = Rocket.loader({
+   target: '#example',
+   body: 'Loading Something'
 });
-document.getElementById('remove').onclick = function() {
-   loader.remove();
-};
+
+Rocket.event.add('#remove', 'click', () => { loader.remove(); });
 &lt;/script&gt;
 </pre>
-         <div id="example"></div>
+         <div id="example" style="display: none;"></div>
          <button id="remove">Remove Loader</button>
          <br>
          <h4>Detailed Documentation</h4>
@@ -75,15 +75,10 @@ document.getElementById('remove').onclick = function() {
    <!-- Scripts -->
    <script src="node_modules/rocket-demo/js/demo.min.js"></script>
    <script src="node_modules/rocket-tools/js/tools.min.js"></script>
-   <script src="js/loader.min.js"></script>
+   <script src="build/js/loader.js"></script>
 	<script>
-   var loader = Rocket.loader({
-      target: '#example',
-      body: 'This is a test.'
-   });
-   document.getElementById('remove').onclick = function() {
-      loader.remove();
-   };
+   const loader = Rocket.loader({target: '#example', body: 'Loading Something'});
+   Rocket.event.add('#remove', 'click', () => { loader.remove(); });
 	</script>
 
 </body>

@@ -1,0 +1,27 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin mod-loader-colour {
+   @each $colour-name, $colour in $ar-colours-primary {
+      ._mod-colour-#{$colour-name} .mod-loader-body {
+         @include text-colour($colour);
+      }
+      ._mod-type-spinner._mod-colour-#{$colour-name} .mod-loader-part-1 {
+         @include border(lighten($colour, 34%), 3px);
+         @include border-t($colour, 3px);
+      }
+      ._mod-type-dots._mod-colour-#{$colour-name} [class*='mod-loader-part-'] {
+         @include background-colour($colour);
+      }
+      ._mod-type-pulse._mod-colour-#{$colour-name} [class*='mod-loader-part-'] {
+         @include border($colour, 3px);
+      }
+   }
+
+   // Special case
+   .mod-loader._mod-colour-black._mod-type-spinner .mod-loader-part-1 {
+      @include border(lighten($black, 80%), 3px);
+      @include border-t($black, 3px);
+   }
+}

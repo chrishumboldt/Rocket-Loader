@@ -4,11 +4,14 @@
 
 @import "../../node_modules/rocket-propel/build/sass/import";
 
-@import "part/variable";
-@import "part/global";
+@import "module/variable";
 
-@import "part/dots";
-@import "part/pulse";
-@import "part/spinner";
+@import "module/loader";
+@import "module/colour";
+@import "module/size";
 
-@import "part/css";
+@import "module/dots";
+@import "module/pulse";
+@import "module/spinner";
+
+@import "css/execute";

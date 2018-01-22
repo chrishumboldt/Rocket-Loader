@@ -1,0 +1,33 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin mod-loader-pulse {
+   ._mod-type-pulse .mod-loader-part-1,
+   ._mod-type-pulse .mod-loader-part-2 {
+      @include position(absolute);
+      @include box-sizing(border-box);
+      @include square($loader-size);
+      @include border-radius(50%);
+      @include border($grey-blue, 3px);
+      @include opacity(0);
+      @include animation(rocket-loader-pulse, 1.4s, infinite);
+   }
+   ._mod-type-pulse .mod-loader-part-2 {
+      @include animation-delay(0.5s);
+   }
+
+   @include keyframes(rocket-loader-pulse) {
+      0% {
+         @include opacity(0);
+         @include transform-scale-3d(0, 0, 0);
+      }
+      30% {
+         @include opacity(1);
+      }
+      80%, 100% {
+         @include opacity(0);
+         @include transform-scale-3d(1, 1, 1);
+      }
+   }
+}

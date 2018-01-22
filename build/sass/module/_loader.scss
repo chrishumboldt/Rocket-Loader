@@ -1,0 +1,27 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin mod-loader {
+   .mod-loader {
+      @include position(relative);
+      @include show;
+      @include text-align(center);
+   }
+   .mod-loader-inner {
+      @include padding-v($loader-size);
+      @include text-colour($grey-blue);
+   }
+   .mod-loader-element {
+      @include spacing-no;
+      @include position(relative);
+      @include square($loader-size);
+      @include center;
+      @include animate(all);
+   }
+   .mod-loader-body {
+      @include show;
+      @include padding-t($space-small);
+      @include text-size(16px);
+   }
+}

@@ -1,9 +1,0 @@
-/**
-@author Chris Humboldt
-**/
-
-@mixin rocket-loader-css {
-   @include loader-dots;
-   @include loader-pulse;
-   @include loader-spinner;
-}

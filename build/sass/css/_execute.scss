@@ -1,0 +1,13 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin mod-loader-css {
+   @include mod-loader;
+   @include mod-loader-colour;
+   @include mod-loader-size;
+
+   @include mod-loader-dots;
+   @include mod-loader-pulse;
+   @include mod-loader-spinner;
+}
