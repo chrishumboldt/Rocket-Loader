@@ -63,7 +63,7 @@ Rocket.loader = ({
       remove(type = '') {
          hideTarget = Rocket.dom.element(target);
          if (!Rocket.is.element(hideTarget)) { return; }
-         
+
          setTimeout(() => {
             Rocket.classes.remove(hideTarget, 'is-loading');
             hideTarget.style.display = (Rocket.is.string(type)) ? type : '';
@@ -78,7 +78,9 @@ Rocket.loader = ({
       const loaderElement = document.createElement('div');
       let loaderPartsCount = 1;
 
-      loaderContainer.className = `mod-loader _mod-type-${type} _mod-colour-${colour} _mod-size-${size}`;
+      loaderContainer.className = `mod-loader _mod-type-${type}`;
+      if (colour !== 'grey-blue') { loaderContainer.className += ` _mod-colour-${colour}` }
+      if (size !== 'normal') { loaderContainer.className += ` _mod-size-${size}` }
       loaderInner.className = 'mod-loader-inner';
       loaderElement.className = 'mod-loader-element';
 

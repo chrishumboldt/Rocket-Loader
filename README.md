@@ -14,7 +14,7 @@ Install via NPM.
 npm install rocket-loader
 ```
 
-**NOTE** that this module has a dependency [Rocket Tools (21kb)](https://github.com/chrishumboldt/Rocket-Tools) which will automatically be installed as well.
+**NOTE** that this module has a dependency [Rocket Tools (28kb)](https://github.com/chrishumboldt/Rocket-Tools) which will automatically be installed as well.
 
 Start by including the necessary files.
 ```html
@@ -22,7 +22,7 @@ Start by including the necessary files.
    <link href="rocket-loader/css/loader.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-   /* Your content goes here */
+   <!-- Your content goes here -->
    <script src="rocket-tools/js/tools.min.js"></script>
    <script src="rocket-loader/js/loader.min.js"></script>
 </body>
@@ -36,13 +36,12 @@ Below is an example of executing the module complete with required HTML and Java
 
 <!-- Scripts -->
 <script>
-var loader = Rocket.loader({
+const loader = Rocket.loader({
    target: '#example',
-   type: 'pulse'
+   body: 'Loading Something'
 });
-document.getElementById('remove').onclick = function() {
-   loader.remove();
-};
+
+Rocket.event.add('#remove', 'click', () => { loader.remove(); });
 </script>
 ```
 
@@ -89,7 +88,7 @@ Twitter: <a href="https://twitter.com/chrishumboldt">twitter.com/chrishumboldt</
 GitHub <a href="https://github.com/chrishumboldt">github.com/chrishumboldt</a><br>
 
 ## Copyright and License
-Copyright 2017 Rocket Project
+Copyright 2018 Rocket Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

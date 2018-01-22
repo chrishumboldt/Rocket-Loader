@@ -1,0 +1,72 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin mod-loader-size {
+   // Large
+   ._mod-size-large .mod-loader-inner {
+      @include padding-v($loader-size-large);
+   }
+   ._mod-size-large .mod-loader-element {
+      @include square($loader-size-large);
+   }
+   ._mod-size-large .mod-loader-body {
+      @include padding-t($space-minor);
+   }
+
+   ._mod-size-large._mod-type-spinner .mod-loader-part-1 {
+      @include square($loader-size-large);
+      border-width: 4px;
+   }
+   ._mod-size-large._mod-type-pulse .mod-loader-part-1,
+   ._mod-size-large._mod-type-pulse .mod-loader-part-2 {
+      @include square($loader-size-large);
+      border-width: 4px;
+   }
+   ._mod-size-large._mod-type-dots .mod-loader-element {
+      @include width(106px);
+   }
+   ._mod-size-large._mod-type-dots .mod-loader-part-1,
+   ._mod-size-large._mod-type-dots .mod-loader-part-2,
+   ._mod-size-large._mod-type-dots .mod-loader-part-3 {
+      @include position-set(margin-top $dot-size-half-large);
+      @include square($dot-size-large);
+   }
+   ._mod-size-large._mod-type-dots .mod-loader-part-2 {
+      @include position-set(left 50% margin-left $dot-size-half-large);
+   }
+
+   // Small
+   ._mod-size-small .mod-loader-inner {
+      @include padding-v($loader-size-small);
+   }
+   ._mod-size-small .mod-loader-element {
+      @include square($loader-size-small);
+   }
+   ._mod-size-small .mod-loader-body {
+      @include padding-t($space-x-small);
+      @include text-size(14px);
+   }
+
+   ._mod-size-small._mod-type-spinner .mod-loader-part-1 {
+      @include square($loader-size-small);
+      border-width: 2px;
+   }
+   ._mod-size-small._mod-type-pulse .mod-loader-part-1,
+   ._mod-size-small._mod-type-pulse .mod-loader-part-2 {
+      @include square($loader-size-small);
+      border-width: 2px;
+   }
+   ._mod-size-small._mod-type-dots .mod-loader-element {
+      @include width(56px);
+   }
+   ._mod-size-small._mod-type-dots .mod-loader-part-1,
+   ._mod-size-small._mod-type-dots .mod-loader-part-2,
+   ._mod-size-small._mod-type-dots .mod-loader-part-3 {
+      @include position-set(margin-top $dot-size-half-small);
+      @include square($dot-size-small);
+   }
+   ._mod-size-small._mod-type-dots .mod-loader-part-2 {
+      @include position-set(left 50% margin-left $dot-size-half-small);
+   }
+}

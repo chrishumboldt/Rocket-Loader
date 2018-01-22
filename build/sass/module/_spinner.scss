@@ -1,0 +1,23 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin mod-loader-spinner {
+   ._mod-type-spinner .mod-loader-part-1 {
+      @include box-sizing(border-box);
+      @include square($loader-size);
+      @include border-radius(50%);
+      @include border(lighten($grey-blue, 20%), 3px);
+      @include border-t($grey-blue, 3px);
+      @include animation(rocket-loader-spinner, 1s, infinite);
+   }
+
+   @include keyframes(rocket-loader-spinner) {
+      0% {
+         @include transform-rotate(0deg);
+      }
+      100% {
+         @include transform-rotate(360deg);
+      }
+   }
+}
